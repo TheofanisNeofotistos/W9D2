@@ -49,9 +49,15 @@ export default class View {
     // debugger
     this.game.playMove(pos)
     square.innerText=this.game.currentPlayer;
+    this.handleGameOver()
   }
   
   handleGameOver() {
+   if(this.game.winner()){
+    alert("WINNER!!!")
+   } else if(this.game.isOver()) {
+    alert(" Nobody Wins =( ")
+   }
   }
 }
 
