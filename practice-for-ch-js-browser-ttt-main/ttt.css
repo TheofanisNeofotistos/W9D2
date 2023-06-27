@@ -17,10 +17,10 @@ li {
     width: 90px;
     height: 90px;
     border: 5px solid black;
-    background: white;
+    background: powderblue;
     cursor: pointer;
     font-size: 90px;
-    color:blue;
+    color:white;
     text-align: center;
     
   
@@ -28,7 +28,7 @@ li {
 }
 
 li:hover {
-    background: blue;
+    background: lightgray;
 }
 
 
