@@ -1,4 +1,4 @@
-class View {
+export default class View {
   constructor(game, el) {
   }
   
@@ -15,4 +15,3 @@ class View {
   }
 }
 
-export default View;
