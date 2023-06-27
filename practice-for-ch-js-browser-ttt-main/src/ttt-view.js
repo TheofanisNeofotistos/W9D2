@@ -1,11 +1,13 @@
 
-import Game from "../ttt_node/game"
+
 
 export default class View {
   constructor(game, el) {
     this.game=game;
     this.el=el;
-    this.setupBoard(3,3)
+    this.handleClick = this.handleClick.bind(this);
+    this.setupBoard(3,3);
+    // debugger
 
   }
   
@@ -27,26 +29,26 @@ export default class View {
     }
     this.el.appendChild(grid)
     // this.handleClick("click",playMove)
-    grid.addEventListener("click",this.makeMove)
+    grid.addEventListener("click",this.handleClick)
 
   }
   
   handleClick(e) {
     e.preventDefault()
     let cell = e.target;
-
+    // debugger
     this.makeMove(cell)
 
     
   }
 
   makeMove(square) {
-    // let row= square.dataset.row
-    // let col= square.dataset.col
-    let pos=[square.row,square.col]
+    let row= square.dataset.row
+    let col= square.dataset.col
+    let pos=[row,col]
+    // debugger
     this.game.playMove(pos)
     square.innerText=this.game.currentPlayer;
-    debugger
   }
   
   handleGameOver() {
