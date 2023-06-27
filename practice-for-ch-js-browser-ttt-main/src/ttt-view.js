@@ -21,7 +21,7 @@ export default class View {
     for(let row = 0 ; row < rows ; row++){
       for(let col=0; col < cols; col++){
         const cell = document.createElement('li')
-        cell.classList.add('cell')
+        
         cell.dataset.row = row
         cell.dataset.col = col
         grid.appendChild(cell)
@@ -50,6 +50,11 @@ export default class View {
     this.game.playMove(pos)
     square.innerText=this.game.currentPlayer;
     this.handleGameOver()
+    if (this.game.currentPlayer==="x"){
+    square.classList.add('cp')
+    }else{
+      square.classList.add('op')
+    }
   }
   
   handleGameOver() {

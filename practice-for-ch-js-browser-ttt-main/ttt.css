@@ -16,7 +16,7 @@ li {
     
     width: 90px;
     height: 90px;
-    border: 5px solid black;
+    border: 5px solid white;
     background: powderblue;
     cursor: pointer;
     font-size: 90px;
@@ -31,5 +31,12 @@ li:hover {
     background: lightgray;
 }
 
+.cp{
+    background-color: pink;
+}
 
+
+.op{
+    background-color: bisque;
+}
 
